@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Voluntariado con Mapa</title>
+    
+    <!-- Leaflet CSS para el mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <style>
+        /* Estilos generales del cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* --- Estilos para el Menú de Navegación --- */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        
+        nav ul li a.active {
+            background-color: #007bff;
+        }
+        /* --- Fin de Estilos del Menú --- */
+
+        /* Estilos para el contenedor principal */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* --- Estilos para el Formulario --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="date"],
+        .form-group input[type="time"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical; 
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        /* --- Fin de Estilos del Formulario --- */
+
+        /* --- Estilos para el Mapa --- */
+        #map {
+            height: 400px; /* Altura obligatoria para que el mapa se vea */
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="App.html">Inicio</a></li>
+            <li><a href="crear_vol.html">Crear voluntariados</a></li>
+            <li><a href="Inscrip.html">Inscribirse en voluntariados</a></li>
+            <li><a href="Blogs.html">Blogs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal: Formulario para Crear Voluntariado -->
+    <div class="container">
+        <h1>Crear un Nuevo Voluntariado</h1>
+        
+        <form>
+            <div class="form-group">
+                <label for="nombre_evento">Nombre del evento de voluntariado</label>
+                <input type="text" id="nombre_evento" name="nombre_evento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="empresa">Empresa u Organización</label>
+                <input type="text" id="empresa" name="empresa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cantidad">Cantidad de voluntarios requeridos</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha del voluntariado</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora">Hora del voluntariado</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lugar">Lugar del voluntariado (descripción)</label>
+                <input type="text" id="lugar" name="lugar" required>
+            </div>
+
+            <!-- Mapa para seleccionar ubicación -->
+            <div class="form-group">
+                <label>Ubicación en el mapa (haz clic para colocar el puntero)</label>
+                <div id="map"></div>
+            </div>
+
+            <!-- Campos ocultos para guardar las coordenadas -->
+            <input type="hidden" id="latitud" name="latitud">
+            <input type="hidden" id="longitud" name="longitud">
+
+            <div class="form-group">
+                <label for="descripcion">Descripción del voluntariado</label>
+                <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Crear Voluntariado</button>
+        </form>
+    </div>
+
+    <!-- Leaflet JS para el mapa (debe ir al final) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script>
+        // Coordenadas iniciales (Ciudad de Panamá)
+        const initialCoords = [8.9833, -79.5167];
+
+        // Inicializar el mapa
+        const map = L.map('map').setView(initialCoords, 13);
+
+        // Añadir la capa de mapa de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Crear un puntero (marcador) inicial
+        let marker = L.marker(initialCoords).addTo(map)
+            .bindPopup('Ubicación del evento.')
+            .openPopup();
+
+        // Obtener los campos ocultos del formulario
+        const latitudInput = document.getElementById('latitud');
+        const longitudInput = document.getElementById('longitud');
+        
+        // Actualizar los campos ocultos con la posición inicial
+        latitudInput.value = initialCoords[0];
+        longitudInput.value = initialCoords[1];
+
+        // Función que se ejecuta al hacer clic en el mapa
+        function onMapClick(e) {
+            // Mover el puntero a la ubicación del clic
+            marker
+                .setLatLng(e.latlng)
+                .bindPopup("Ubicación seleccionada: <br>" + e.latlng.toString())
+                .openPopup();
+
+            // Actualizar el valor de los campos ocultos con las nuevas coordenadas
+            latitudInput.value = e.latlng.lat;
+            longitudInput.value = e.latlng.lng;
+        }
+
+        // Escuchar el evento 'click' en el mapa
+        map.on('click', onMapClick);
+    </script>
+</body>
+</html>
