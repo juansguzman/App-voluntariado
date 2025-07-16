@@ -311,7 +311,7 @@
                 setTimeout(() => {
                     currentQuestionIndex++;
                     showNextQuestion();
-                }, 2000); // Aumentado para dar tiempo a leer el feedback
+                }, 1800); 
             }
 
             function selectAnswer(selectedOption, correctAnswer) {
@@ -337,15 +337,14 @@
                 setTimeout(() => {
                     currentQuestionIndex++;
                     showNextQuestion();
-                }, 2000); // Aumentado para dar tiempo a leer el feedback
+                }, 1800); 
             }
 
             function showFeedback(message, color) {
                 elements.feedbackText.textContent = message;
                 elements.feedbackText.style.color = color;
-                // Re-trigger animation
                 elements.feedbackText.style.animation = 'none';
-                elements.feedbackText.offsetHeight; /* trigger reflow */
+                elements.feedbackText.offsetHeight;
                 elements.feedbackText.style.animation = null; 
             }
 
@@ -409,11 +408,10 @@
                     elements.questionText.textContent = 'No se pudieron cargar las preguntas. Intenta de nuevo más tarde.';
                 });
             
-            restartBtn.addEventListener('click', () => {
-                currentQuestionIndex = 0;
-                score = 0;
-                lives = 3;
-                startQuiz();
+            // --- CAMBIO PRINCIPAL AQUÍ ---
+            // Ahora, el botón de reinicio simplemente recarga la página.
+            elements.restartBtn.addEventListener('click', () => {
+                location.reload();
             });
         });
     </script>
