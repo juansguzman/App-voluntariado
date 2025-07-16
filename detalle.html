@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Voluntariado</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f6; }
+        nav { background-color: #333; color: #fff; padding: 10px 0; position: sticky; top: 0; width: 100%; z-index: 1000; }
+        nav ul { list-style: none; margin: 0; padding: 0; text-align: center; }
+        nav ul li { display: inline; }
+        nav ul li a { color: #fff; text-decoration: none; padding: 15px 20px; display: inline-block; }
+        .container { max-width: 800px; margin: 40px auto; padding: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .event-header h1 { font-size: 2.5em; color: #0056b3; margin: 0 0 10px 0; }
+        .event-header .organizer { font-size: 1.2em; font-weight: bold; color: #555; margin-bottom: 20px; }
+        .event-details { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
+        .detail-item { display: flex; align-items: flex-start; }
+        .detail-item svg { width: 24px; height: 24px; margin-right: 15px; fill: #007bff; flex-shrink: 0; margin-top: 3px; }
+        .description { margin-top: 20px; color: #333; }
+        #map { height: 350px; width: 100%; border-radius: 8px; margin-top: 20px; z-index: 1; }
+        .inscribirse-btn { display: block; width: 100%; padding: 15px; margin-top: 30px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; text-align: center; font-size: 1.2em; border: none; cursor: pointer; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #007bff; text-decoration: none; font-weight: bold; }
+        .error-message { text-align: center; color: #d9534f; }
+
+        @media (min-width: 768px) {
+            .event-details { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="crear_vol.html">Crear voluntariados</a></li>
+            <li><a href="Inscrip.html">Inscribirse en voluntariados</a></li>
+            <li><a href="Blogs.html">Blogs</a></li>
+        </ul>
+    </nav>
+    <div id="menu-placeholder"></div>
+
+    <div id="event-container" class="container">
+        <!-- El contenido del evento se insertará aquí -->
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // --- SCRIPT PARA CARGAR EL MENÚ ---
+        // Este script asume que tienes un archivo 'menu.html' en la misma carpeta.
+        fetch('menu.html')
+            .then(response => response.ok ? response.text() : Promise.reject('menu.html no encontrado'))
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el menú:', error));
+
+        // --- SCRIPT PARA CARGAR DETALLES DEL EVENTO ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventContainer = document.getElementById('event-container');
+
+            // 1. Obtener el ID del evento desde la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventoId = parseInt(urlParams.get('id'));
+            
+            console.log('ID obtenido de la URL:', urlParams.get('id'));
+            console.log('ID convertido a número:', eventoId);
+
+
+            if (!eventoId) {
+                eventContainer.innerHTML = `<h2 class="error-message">Error: No se especificó un ID de evento en la URL.</h2><p class="error-message">Asegúrate de que el enlace desde la página anterior sea correcto.</p>`;
+                return;
+            }
+
+            // 2. Cargar el JSON y encontrar el evento
+            // IMPORTANTE: Este fetch asume que 'eventos.json' está en la misma carpeta que este archivo HTML.
+            fetch('eventos.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`No se pudo cargar eventos.json. Código de error: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Datos cargados desde eventos.json:', data);
+                    const evento = data.find(e => e.id === eventoId);
+                    console.log('Resultado de la búsqueda del evento:', evento);
+
+
+                    if (!evento) {
+                        eventContainer.innerHTML = `<h2 class="error-message">Error: Evento no encontrado.</h2><p class="error-message">No se encontró ningún evento con el ID: ${eventoId}.</p>`;
+                        return;
+                    }
+
+                    // 3. Mostrar los detalles del evento
+                    const formatDateTime = (isoString) => {
+                        const date = new Date(isoString);
+                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
+                        return date.toLocaleDateString('es-ES', options);
+                    };
+
+                    eventContainer.innerHTML = `
+                        <a href="Inscrip.html" class="back-link">&larr; Volver a la lista</a>
+                        <div class="event-header">
+                            <h1>${evento.nombre_evento}</h1>
+                            <p class="organizer">Organizado por: ${evento.empresa}</p>
+                        </div>
+                        <p class="description">${evento.descripcion}</p>
+                        <div class="event-details">
+                            <div class="detail-item">
+                                <svg viewBox="0 0 24 24"><path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" /></svg>
+                                <div><strong>Fecha y Hora:</strong><br>${formatDateTime(evento.fecha_hora_evento)}</div>
+                            </div>
+                            <div class="detail-item">
+                                <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>
+                                <div><strong>Lugar:</strong><br>${evento.lugar}</div>
+                            </div>
+                            <div class="detail-item">
+                                <svg viewBox="0 0 24 24"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
+                                <div><strong>Voluntarios Requeridos:</strong><br>${evento.cantidad_requerida}</div>
+                            </div>
+                        </div>
+                        <div id="map"></div>
+                        <button class="inscribirse-btn" onclick="alert('¡Inscripción exitosa al evento: ${evento.nombre_evento}!')">¡Quiero Inscribirme!</button>
+                    `;
+
+                    // 4. Inicializar el mapa en la ubicación del evento
+                    const coords = [parseFloat(evento.latitud), parseFloat(evento.longitud)];
+                    const map = L.map('map').setView(coords, 15);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; OpenStreetMap'
+                    }).addTo(map);
+                    L.marker(coords).addTo(map)
+                        .bindPopup(evento.nombre_evento)
+                        .openPopup();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    eventContainer.innerHTML = `<h2 class="error-message">No se pudo cargar la información del evento.</h2><p class="error-message">Detalle del error: ${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+    {
+      "id": 1,
+      "nombre_evento": "Limpieza de Playa en Costa del Este",
+      "empresa": "MarViva Panamá",
+      "cantidad_requerida": 50,
+      "lugar": "Corredor Sur, entrada de Costa del Este, Ciudad de Panamá",
+      "descripcion": "Jornada de recolección de plásticos y desechos para conservar nuestro ecosistema marino. Se proveerán guantes y bolsas. ¡Trae tu botella de agua reutilizable!",
+      "latitud": "9.0046",
+      "longitud": "-79.4897",
+      "fecha_hora_evento": "2025-08-16T08:00:00.000Z",
+      "status": "Próximo"
+    },
+    {
+      "id": 2,
+      "nombre_evento": "Reforestación en el Parque Metropolitano",
+      "empresa": "ANCON",
+      "cantidad_requerida": 30,
+      "lugar": "Centro de Visitantes del Parque Natural Metropolitano",
+      "descripcion": "Ayúdanos a sembrar 100 árboles de especies nativas para contribuir a la reforestación del pulmón de la ciudad. Una actividad ideal para toda la familia.",
+      "latitud": "8.9959",
+      "longitud": "-79.5486",
+      "fecha_hora_evento": "2025-09-20T09:00:00.000Z",
+      "status": "Próximo"
+    },
+    {
+      "id": 4,
+      "nombre_evento": "Apoyo en Comedor Infantil de San Miguelito",
+      "empresa": "Nutre Hogar",
+      "cantidad_requerida": 15,
+      "lugar": "Centro Nutre Hogar, Paraíso, San Miguelito",
+      "descripcion": "Colabora en la preparación y servicio de alimentos para los niños del comedor. Una experiencia gratificante y de gran impacto social.",
+      "latitud": "9.0336",
+      "longitud": "-79.5120",
+      "fecha_hora_evento": "2025-10-04T11:00:00.000Z",
+      "status": "Próximo"
+    },
+    {
+      "id": 5,
+      "nombre_evento": "Clasificación de Donaciones",
+      "empresa": "Banco de Alimentos Panamá",
+      "cantidad_requerida": 25,
+      "lugar": "Bodega Central, Vía Tocumen",
+      "descripcion": "Ayuda a clasificar y empacar alimentos no perecederos que serán distribuidos a familias necesitadas en todo el país.",
+      "latitud": "9.0667",
+      "longitud": "-79.4167",
+      "fecha_hora_evento": "2025-10-18T09:30:00.000Z",
+      "status": "Próximo"
+    },
+    {
+      "id": 6,
+      "nombre_evento": "Mantenimiento de Senderos en el Valle de Antón",
+      "empresa": "MiAmbiente",
+      "cantidad_requerida": 40,
+      "lugar": "Monumento Natural Cerro Gaital, El Valle de Antón",
+      "descripcion": "Jornada de limpieza y mantenimiento de los senderos del Cerro Gaital para garantizar la seguridad de los visitantes y la conservación del área.",
+      "latitud": "8.6167",
+      "longitud": "-80.1333",
+      "fecha_hora_evento": "2025-11-08T08:30:00.000Z",
+      "status": "Próximo"
+    },
+    {
+      "id": 7,
+      "nombre_evento": "Compañía para Adultos Mayores",
+      "empresa": "Hogar Bolívar de Ancianos",
+      "cantidad_requerida": 10,
+      "lugar": "Hogar Bolívar, Ciudad de Panamá",
+      "descripcion": "Comparte una tarde de conversación, juegos de mesa y lectura con los residentes del Hogar Bolívar. Tu compañía es el mejor regalo.",
+      "latitud": "8.9667",
+      "longitud": "-79.5333",
+      "fecha_hora_evento": "2025-11-22T14:00:00.000Z",
+      "status": "Próximo"
+    },
+    {
+      "id": 3,
+      "nombre_evento": "Pintando Alegría en El Chorrillo",
+      "empresa": "MUPA (Municipio de Panamá)",
+      "cantidad_requerida": 20,
+      "lugar": "Centro Comunitario de El Chorrillo, Ciudad de Panamá",
+      "descripcion": "Renovación y pintura de la fachada del centro comunitario para brindar un espacio más alegre a los niños del área. No se requiere experiencia previa.",
+      "latitud": "8.9517",
+      "longitud": "-79.5435",
+      "fecha_hora_evento": "2025-06-28T10:00:00.000Z",
+      "status": "Finalizado"
+    }
+  ]

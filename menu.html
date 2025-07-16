@@ -1,76 +1,90 @@
+<!-- Estilos para la barra de navegación -->
 <style>
-    /* Estilos generales del cuerpo de la página */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        /* --- Estilos para el Menú de Navegación --- */
-        nav {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            position: sticky; /* Fija el menú en la parte superior al hacer scroll */
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none; /* Quita los puntos de la lista */
-            margin: 0;
-            padding: 0;
-            text-align: center; /* Centra los elementos del menú */
-        }
-
-        nav ul li {
-            display: inline; /* Coloca los elementos uno al lado del otro */
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none; /* Quita el subrayado de los enlaces */
-            padding: 15px 20px;
-            display: inline-block;
-            transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
-        }
-
-        /* Efecto al pasar el mouse sobre un elemento del menú */
-        nav ul li a:hover {
-            background-color: #575757;
-        }
-        /* --- Fin de Estilos del Menú --- */
-
-
-        /* Estilos para el contenido principal */
-        .container {
-            max-width: 800px;
-            margin: 40px auto; /* Aumenta el margen superior para que no quede pegado al menú */
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            display: block;
-            margin: 0 auto 20px;
-        }
-        h1 {
-            color: #1a1a1a;
-            text-align: center;
-        }
+    nav {
+        background-color: #333;
+        /* El padding derecho crea espacio desde el borde de la pantalla */
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+        background-color: #575757;
+    }
+    .profile-link-container {
+        margin-left: auto; /* Empuja el elemento a la derecha */
+        position: relative;
+        padding-right: 3cap; /* Necesario para posicionar el tooltip */
+    }
+    .profile-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden; /* Recorta la imagen para que sea un círculo perfecto */
+        transition: transform 0.2s ease;
+    }
+    .profile-icon:hover {
+        transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    }
+    .profile-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    }
+    .tooltip {
+        position: absolute;
+        bottom: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #555;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-family: sans-serif;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+        z-index: 10;
+    }
+    .profile-link-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
 </style>
+
+<!-- Contenido del menú -->
 <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="crear_vol.html">Crear voluntariados</a></li>
-            <li><a href="Inscrip.html">Inscribirse en voluntariados</a></li>
-            <li><a href="Blogs.html">Blogs</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="crear_vol.html">Crear voluntariados</a></li>
+        <li><a href="Inscrip.html">Inscribirse en voluntariados</a></li>
+        <li><a href="Blogs.html">Blogs</a></li>
+        
+        <!-- Enlace de perfil como imagen circular a la derecha -->
+        <li class="profile-link-container">
+            <a href="perfil.html" class="profile-icon" title="Perfil de usuario">
+                <img src="recursos/chica.jpeg" alt="Perfil de usuario">
+                <span class="tooltip">Perfil de usuario</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
