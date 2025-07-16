@@ -12,7 +12,7 @@
         nav ul li a { color: #fff; text-decoration: none; padding: 15px 20px; display: inline-block; }
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         
-        /* Estilos del Perfil */
+        
         .profile-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -81,7 +81,7 @@
             padding-bottom: 10px;
         }
 
-        /* Estilos de Insignias (Badges) */
+      
         .badges-container {
             display: flex;
             flex-wrap: wrap;
@@ -115,7 +115,7 @@
             color: #666;
         }
 
-        /* Estilos de Comentarios */
+     
         .comments-section {
             background-color: #fff;
             border-radius: 10px;
@@ -267,7 +267,7 @@
     </div>
 
     <script>
-        // --- SCRIPT PARA CARGAR EL MENÚ ---
+      
         fetch('menu.html')
             .then(response => response.ok ? response.text() : Promise.reject('menu.html no encontrado'))
             .then(data => {
@@ -275,7 +275,7 @@
             })
             .catch(error => console.error('Error al cargar el menú:', error));
         
-        // --- SCRIPT PARA EL FORMULARIO DE COMENTARIOS ---
+     
         document.querySelector('.comment-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Funcionalidad de comentarios en desarrollo.');

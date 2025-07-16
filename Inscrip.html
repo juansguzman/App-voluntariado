@@ -68,7 +68,7 @@
 
         .event-card .description {
             color: #666;
-            flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+            flex-grow: 1; 
             margin-bottom: 25px;
         }
 
@@ -87,7 +87,7 @@
         
         .details-btn {
             background-color: #28a745;
-            align-self: flex-start; /* Alinea el botón a la izquierda */
+            align-self: flex-start; 
         }
         
         .load-more-btn {
@@ -113,7 +113,7 @@
         #load-more-container {
             text-align: center;
             margin-top: 30px;
-            display: none; /* Oculto por defecto */
+            display: none; 
         }
 
         @media (min-width: 768px) {
@@ -134,25 +134,25 @@
        
         <div id="event-list" class="event-list"></div>
         
-        <!-- Contenedor para el botón "Ver más" -->
+        
         <div id="load-more-container">
             <button id="load-more-btn" class="load-more-btn">Ver más eventos</button>
         </div>
     </div>
     
     <script>
-        // --- SCRIPT PARA CARGAR EL MENÚ ---
+        
         fetch('menu.html')
             .then(response => response.ok ? response.text() : Promise.reject('menu.html no encontrado'))
             .then(data => {
                 document.getElementById('menu-placeholder').innerHTML = data;
-                // Marcar el enlace activo
+               
                 const currentPageLink = document.querySelector('a[href*="inscribirse"]');
                 if (currentPageLink) currentPageLink.classList.add('active');
             })
             .catch(error => console.error('Error al cargar el menú:', error));
 
-        // --- SCRIPT PARA CARGAR Y MOSTRAR EVENTOS ---
+        
         document.addEventListener('DOMContentLoaded', function() {
             const eventListContainer = document.getElementById('event-list');
             const loadMoreContainer = document.getElementById('load-more-container');
@@ -160,7 +160,7 @@
 
             let todosLosEventosFuturos = [];
             let eventosMostrados = 0;
-            const eventosPorPagina = 4; // Mostrar 4 eventos a la vez
+            const eventosPorPagina = 4; 
 
             function renderizarEventos() {
                 const proximosEventos = todosLosEventosFuturos.slice(eventosMostrados, eventosMostrados + eventosPorPagina);

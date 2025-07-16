@@ -33,13 +33,12 @@
     <div id="menu-placeholder"></div>
 
     <div id="event-container" class="container">
-        <!-- El contenido del evento se insertará aquí -->
+        
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // --- SCRIPT PARA CARGAR EL MENÚ ---
-        // Este script asume que tienes un archivo 'menu.html' en la misma carpeta.
+        
         fetch('menu.html')
             .then(response => response.ok ? response.text() : Promise.reject('menu.html no encontrado'))
             .then(data => {
@@ -47,11 +46,11 @@
             })
             .catch(error => console.error('Error al cargar el menú:', error));
 
-        // --- SCRIPT PARA CARGAR DETALLES DEL EVENTO ---
+        
         document.addEventListener('DOMContentLoaded', function() {
             const eventContainer = document.getElementById('event-container');
 
-            // 1. Obtener el ID del evento desde la URL
+            
             const urlParams = new URLSearchParams(window.location.search);
             const eventoId = parseInt(urlParams.get('id'));
             
@@ -64,8 +63,6 @@
                 return;
             }
 
-            // 2. Cargar el JSON y encontrar el evento
-            // IMPORTANTE: Este fetch asume que 'eventos.json' está en la misma carpeta que este archivo HTML.
             fetch('eventos.json')
                 .then(response => {
                     if (!response.ok) {
@@ -84,7 +81,6 @@
                         return;
                     }
 
-                    // 3. Mostrar los detalles del evento
                     const formatDateTime = (isoString) => {
                         const date = new Date(isoString);
                         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
@@ -116,7 +112,7 @@
                         <button class="inscribirse-btn" onclick="alert('¡Inscripción exitosa al evento: ${evento.nombre_evento}!')">¡Quiero Inscribirme!</button>
                     `;
 
-                    // 4. Inicializar el mapa en la ubicación del evento
+                    
                     const coords = [parseFloat(evento.latitud), parseFloat(evento.longitud)];
                     const map = L.map('map').setView(coords, 15);
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

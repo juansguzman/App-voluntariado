@@ -8,7 +8,6 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f6; }
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         
-        /* --- Estilos del Blog --- */
         .blog-header {
             text-align: center;
             margin-bottom: 40px;
@@ -174,14 +173,12 @@
     </div>
 
     <script>
-        // --- SCRIPT PARA CARGAR EL MENÚ ---
         fetch('menu.html')
             .then(response => response.ok ? response.text() : Promise.reject('menu.html no encontrado'))
             .then(data => {
                 const menuPlaceholder = document.getElementById('menu-placeholder');
                 if(menuPlaceholder) {
                     menuPlaceholder.innerHTML = data;
-                    // Marcar el enlace activo
                     const currentPageLink = document.querySelector('a[href*="Blogs.html"]');
                     if (currentPageLink) currentPageLink.classList.add('active');
                 }

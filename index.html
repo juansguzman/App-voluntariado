@@ -92,7 +92,7 @@
         .then(response => response.ok ? response.text() : Promise.reject('menu.html no encontrado'))
         .then(data => {
             document.getElementById('menu-placeholder').innerHTML = data;
-            // Marcar el enlace activo
+            
             const currentPageLink = document.querySelector('a[href*="inscribirse"]');
             if (currentPageLink) currentPageLink.classList.add('active');
         })
