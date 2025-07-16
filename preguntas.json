@@ -1,0 +1,252 @@
+[
+  {
+    "pregunta": "¿Qué es la acción ciudadana?",
+    "opciones": [
+      "La participación activa de los individuos en asuntos de interés público para mejorar su comunidad.",
+      "Votar en las elecciones únicamente.",
+      "Pagar impuestos puntualmente.",
+      "Obedecer todas las leyes sin cuestionarlas."
+    ],
+    "respuesta": "La participación activa de los individuos en asuntos de interés público para mejorar su comunidad."
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes es una forma directa de voluntariado comunitario?",
+    "opciones": [
+      "Compartir una noticia sobre un problema social en redes sociales.",
+      "Participar en la limpieza de un parque local.",
+      "Donar dinero a una organización benéfica.",
+      "Firmar una petición en línea."
+    ],
+    "respuesta": "Participar en la limpieza de un parque local."
+  },
+  {
+    "pregunta": "Según la Constitución de Panamá, la soberanía reside en...",
+    "opciones": [
+      "La Asamblea Nacional.",
+      "El Presidente de la República.",
+      "El Pueblo.",
+      "La Corte Suprema de Justicia."
+    ],
+    "respuesta": "El Pueblo."
+  },
+  {
+    "pregunta": "¿Qué mecanismo de participación ciudadana permite a los ciudadanos proponer la creación o modificación de leyes?",
+    "opciones": [
+      "El Referéndum.",
+      "La Iniciativa Popular.",
+      "La Consulta Popular.",
+      "El Cabildo Abierto."
+    ],
+    "respuesta": "La Iniciativa Popular."
+  },
+  {
+    "pregunta": "¿Cuál es el principal beneficio de participar en voluntariados para la comunidad?",
+    "opciones": [
+      "Fortalece el tejido social y atiende necesidades locales de forma directa.",
+      "Reduce la carga de trabajo del gobierno.",
+      "Aumenta el valor de las propiedades en el área.",
+      "Genera empleos directos para los voluntarios."
+    ],
+    "respuesta": "Fortalece el tejido social y atiende necesidades locales de forma directa."
+  },
+  {
+    "pregunta": "El derecho a un ambiente sano es un derecho de...",
+    "opciones": [
+      "Primera generación (derechos civiles y políticos).",
+      "No es considerado un derecho fundamental.",
+      "Segunda generación (derechos económicos y sociales).",
+      "Tercera generación (derechos de solidaridad)."
+    ],
+    "respuesta": "Tercera generación (derechos de solidaridad)."
+  },
+  {
+    "pregunta": "¿Cuál es el propósito principal de una ONG (Organización No Gubernamental)?",
+    "opciones": [
+      "Generar ganancias para sus accionistas.",
+      "Apoyar al gobierno en todas sus decisiones.",
+      "Trabajar en causas sociales o ambientales sin fines de lucro.",
+      "Regular el comercio internacional."
+    ],
+    "respuesta": "Trabajar en causas sociales o ambientales sin fines de lucro."
+  },
+  {
+    "pregunta": "En Panamá, ¿cómo se llama la autoridad local que gobierna un corregimiento?",
+    "opciones": [
+      "El Alcalde.",
+      "El Gobernador.",
+      "El Representante de Corregimiento.",
+      "El Diputado."
+    ],
+    "respuesta": "El Representante de Corregimiento."
+  },
+  {
+    "pregunta": "¿Qué acción cotidiana contribuye directamente a la sostenibilidad ambiental?",
+    "opciones": [
+      "Usar el auto para trayectos cortos.",
+      "Separar los residuos para reciclaje.",
+      "Dejar las luces encendidas al salir de una habitación.",
+      "Comprar productos de un solo uso."
+    ],
+    "respuesta": "Separar los residuos para reciclaje."
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes es un derecho fundamental de los niños, niñas y adolescentes?",
+    "opciones": [
+      "El derecho a tener un teléfono móvil.",
+      "El derecho a no ir a la escuela.",
+      "El derecho a la recreación y a la cultura.",
+      "El derecho a trabajar sin límites de edad."
+    ],
+    "respuesta": "El derecho a la recreación y a la cultura."
+  },
+  {
+    "pregunta": "¿Qué significa ser un 'ciudadano digitalmente responsable'?",
+    "opciones": [
+      "Tener perfiles en todas las redes sociales.",
+      "Compartir información sin verificar su fuente.",
+      "Proteger tus datos personales y respetar a los demás en línea.",
+      "Descargar contenido ilegalmente."
+    ],
+    "respuesta": "Proteger tus datos personales y respetar a los demás en línea."
+  },
+  {
+    "pregunta": "La regla de las '3R' de la sostenibilidad significa:",
+    "opciones": [
+      "Revisar, Reclamar, Repetir.",
+      "Reducir, Reutilizar, Reciclar.",
+      "Rápido, Ruidoso, Radical.",
+      "Respetar, Responder, Recordar."
+    ],
+    "respuesta": "Reducir, Reutilizar, Reciclar."
+  },
+  {
+    "pregunta": "¿Qué es un 'cabildo abierto'?",
+    "opciones": [
+      "Una reunión pública del consejo municipal para discutir asuntos de la comunidad.",
+      "Una fiesta popular en la plaza del pueblo.",
+      "Una elección para un puesto vacante.",
+      "Un desfile militar."
+    ],
+    "respuesta": "Una reunión pública del consejo municipal para discutir asuntos de la comunidad."
+  },
+  {
+    "pregunta": "¿Cuál es el objetivo principal de los Objetivos de Desarrollo Sostenible (ODS) de la ONU?",
+    "opciones": [
+      "Fomentar la competencia económica entre países.",
+      "Abordar desafíos globales como la pobreza, la desigualdad y el cambio climático para un futuro mejor.",
+      "Establecer un gobierno mundial único.",
+      "Promover el turismo espacial."
+    ],
+    "respuesta": "Abordar desafíos globales como la pobreza, la desigualdad y el cambio climático para un futuro mejor."
+  },
+  {
+    "pregunta": "¿Qué es la 'inclusión social'?",
+    "opciones": [
+      "Crear grupos exclusivos para personas con los mismos intereses.",
+      "Asegurar que todas las personas, sin importar su origen o condición, tengan las mismas oportunidades.",
+      "Darle privilegios a ciertos grupos de la sociedad.",
+      "Ignorar las diferencias entre las personas."
+    ],
+    "respuesta": "Asegurar que todas las personas, sin importar su origen o condición, tengan las mismas oportunidades."
+  },
+  {
+    "pregunta": "En una democracia, ¿por qué es importante la libertad de prensa?",
+    "opciones": [
+      "Para que los periodistas puedan publicar cualquier rumor.",
+      "Para mantener a los ciudadanos informados y vigilar las acciones del poder.",
+      "Para que los medios de comunicación ganen más dinero.",
+      "No es importante, genera inestabilidad."
+    ],
+    "respuesta": "Para mantener a los ciudadanos informados y vigilar las acciones del poder."
+  },
+  {
+    "pregunta": "¿Cuál es la edad mínima para votar en las elecciones generales de Panamá?",
+    "opciones": [
+      "16 años.",
+      "21 años.",
+      "18 años.",
+      "25 años."
+    ],
+    "respuesta": "18 años."
+  },
+  {
+    "pregunta": "¿Qué es la Defensoría del Pueblo en Panamá?",
+    "opciones": [
+      "Una firma de abogados del gobierno.",
+      "Una institución que defiende los derechos humanos de los habitantes.",
+      "Un tribunal para juzgar a los políticos.",
+      "Una oficina para pagar impuestos."
+    ],
+    "respuesta": "Una institución que defiende los derechos humanos de los habitantes."
+  },
+  {
+    "pregunta": "Ser un 'consumidor consciente' implica:",
+    "opciones": [
+      "Comprar siempre las marcas más caras.",
+      "Considerar el impacto social y ambiental de los productos que compras.",
+      "Comprar solo productos de fabricación nacional.",
+      "No comprar nada en línea."
+    ],
+    "respuesta": "Considerar el impacto social y ambiental de los productos que compras."
+  },
+  {
+    "pregunta": "¿Qué es la biodiversidad?",
+    "opciones": [
+      "La cantidad de parques en una ciudad.",
+      "La variedad de vida en la Tierra, incluyendo plantas, animales, hongos y microorganismos.",
+      "El estudio de las biografías de los científicos.",
+      "La diversidad de culturas en un país."
+    ],
+    "respuesta": "La variedad de vida en la Tierra, incluyendo plantas, animales, hongos y microorganismos."
+  },
+  {
+    "pregunta": "La corrupción afecta a la sociedad principalmente porque...",
+    "opciones": [
+      "Hace que las noticias sean más interesantes.",
+      "Desvía recursos públicos que podrían usarse en salud, educación e infraestructura.",
+      "Aumenta la eficiencia del gobierno.",
+      "Es una forma legal de hacer negocios."
+    ],
+    "respuesta": "Desvía recursos públicos que podrían usarse en salud, educación e infraestructura."
+  },
+  {
+    "pregunta": "¿Cuál de estas acciones es un ejemplo de civismo?",
+    "opciones": [
+      "Tirar basura en la calle.",
+      "Ceder el asiento a una persona mayor en el transporte público.",
+      "Escuchar música a todo volumen en lugares públicos.",
+      "Estacionar en un lugar para personas con discapacidad sin necesitarlo."
+    ],
+    "respuesta": "Ceder el asiento a una persona mayor en el transporte público."
+  },
+  {
+    "pregunta": "El 'Estado de Derecho' significa que...",
+    "opciones": [
+      "El gobierno puede hacer lo que quiera.",
+      "Solo los ciudadanos deben obedecer la ley.",
+      "Nadie, ni siquiera el gobierno, está por encima de la ley.",
+      "Las leyes solo se aplican a los extranjeros."
+    ],
+    "respuesta": "Nadie, ni siquiera el gobierno, está por encima de la ley."
+  },
+  {
+    "pregunta": "¿Qué es la empatía?",
+    "opciones": [
+      "Sentir lástima por alguien.",
+      "La capacidad de entender y compartir los sentimientos de otra persona.",
+      "Estar de acuerdo con todo lo que dicen los demás.",
+      "Juzgar las acciones de los demás."
+    ],
+    "respuesta": "La capacidad de entender y compartir los sentimientos de otra persona."
+  },
+  {
+    "pregunta": "¿Por qué es importante la separación de poderes (Ejecutivo, Legislativo, Judicial) en un gobierno?",
+    "opciones": [
+      "Para que el gobierno sea más lento.",
+      "Para evitar la concentración de poder y proteger la libertad de los ciudadanos.",
+      "Para crear más empleos para los políticos.",
+      "No es importante, es mejor que una sola persona decida todo."
+    ],
+    "respuesta": "Para evitar la concentración de poder y proteger la libertad de los ciudadanos."
+  }
+]
