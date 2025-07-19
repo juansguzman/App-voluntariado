@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce a Nuestro Equipo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container { 
+            max-width: 1200px; /* Aumentado para dar espacio a la cuadrícula */
+            margin: 40px auto; 
+            padding: 20px;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .page-header h1 {
+            font-size: 2.8em;
+            color: #333;
+        }
+        .page-header p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 700px;
+            margin: 10px auto 0 auto;
+        }
+
+        /* Contenedor de la cuadrícula del equipo */
+        .team-grid {
+            display: grid;
+            /* Crea columnas flexibles que se adaptan al tamaño */
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+        
+        .team-member {
+            /* Contenedor para cada tarjeta y su nombre */
+        }
+
+        /* Contenedor principal de la tarjeta interactiva */
+        .interactive-card {
+            width: 320px;
+            height: 420px;
+            position: relative;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Estilos para ambas imágenes (la caricatura y la real) */
+        .interactive-card .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .interactive-card .real-image {
+            opacity: 0;
+        }
+        .interactive-card:hover .real-image {
+            opacity: 1;
+        }
+        .interactive-card:hover .cartoon-image {
+            opacity: 0;
+        }
+
+        /* Contenedor para el texto que aparece al hacer clic */
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-in-out;
+            /* --- MEJORA PARA TEXTO LARGO --- */
+            max-height: 70%; /* Limita la altura del recuadro de texto */
+            overflow-y: auto; /* Añade scroll AUTOMÁTICAMENTE si el texto es muy largo */
+        }
+        
+        .text-overlay h3 {
+            margin-top: 0;
+        }
+
+        /* Estilos para la barra de scroll (opcional, para que se vea mejor) */
+        .text-overlay::-webkit-scrollbar {
+            width: 8px;
+        }
+        .text-overlay::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        .text-overlay::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+
+        .interactive-card.show-text .text-overlay {
+            transform: translateY(0);
+        }
+
+        /* Estilos para el texto debajo de la tarjeta */
+        .card-caption {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .card-caption h2 {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: 600;
+            margin: 0;
+        }
+        .card-caption p {
+            font-size: 1em;
+            color: #007bff;
+            margin: 4px 0 0 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="menu-placeholder"></div>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Conoce a Nuestro Equipo</h1>
+            <p>Somos un grupo de personas apasionadas y comprometidas con generar un cambio positivo. ¡Descubre quiénes somos!</p>
+        </header>
+
+        <div class="team-grid">
+            <!-- Miembro 1 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/A7D3A8/333?text=Valderrama+Yahir+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="conocenos/yahir_real.jpeg" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>Yahir Valderrama </h3>
+                        <p>Soy Valderrama Yahir, un joven visionario, miembro activo de diversas organizaciones juveniles sin fines de lucro y presentador de programas radiales en SERTV, el ITSE y Radio Panamá.
+Me apasiona trabajar con la juventud, especialmente participando activamente y promoviendo el liderazgo juvenil, con el firme propósito de formar a los próximos líderes de nuestro país.
+"Somos capaces de mucho más de lo que creemos ser capaces."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>Yahir Valderrama</h2>
+                    <p>Rol</p>
+                </div>
+            </div>
+
+            <!-- Miembro 2 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/F5B7B1/333?text=Emily+Sterling+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="conocenos/emily_real.jpeg" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>Emily Sterling</h3>
+                        <p>Soy Emily Sterling, ingeniera industrial egresada de la Universidad Tecnológica de Panamá.
+Me apasiona servir a los demás, compartir mis conocimientos e inspirar con mi ejemplo, siendo una fuente de motivación para quienes me rodean.
+"El verdadero éxito no depende únicamente de nuestros esfuerzos, sino también de nuestra fe, nuestra actitud y la manera en que nos relacionamos con los demás."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>Emily Sterling</h2>
+                    <p>Rol</p>
+                </div>
+            </div>
+
+            <!-- Miembro 3 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/AED6F1/333?text=maryorie+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="https://placehold.co/320x420/EFEFEF/333?text=Foto+de+maryorie" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>Maryorie Prado</h3>
+                        <p>Soy Mayorie Prado, una joven atleta de karate, disciplinada y comprometida. Me apasiona aprender y compartir mis conocimientos con los demás. 
+El karate es mi pasión, y mi meta es convertirme en la mejor del país. 
+Nunca permitas que el miedo te impida dar lo mejor de ti.</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>Maryorie Prado</h2>
+                    <p>Rol</p>
+                </div>
+            </div>
+
+            <!-- Miembro 4 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/F9E79F/333?text=Luis+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="https://placehold.co/320x420/EFEFEF/333?text=Foto+de+Luis" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>Luis, 31 años</h3>
+                        <p>"Cada detalle cuenta. Un buen diseño puede hacer que la experiencia de ayudar sea aún mejor."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>Luis Martínez</h2>
+                    <p>Diseñador UX/UI</p>
+                </div>
+            </div>
+
+            <!-- Miembro 5 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/D7BDE2/333?text=María+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="https://placehold.co/320x420/EFEFEF/333?text=Foto+de+María" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>María, 26 años</h3>
+                        <p>"Contar las historias de nuestros voluntarios es mi pasión. Cada acción inspira a otra."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>María Fernández</h2>
+                    <p>Contenido y Redes</p>
+                </div>
+            </div>
+
+            <!-- Miembro 6 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/A9DFBF/333?text=Javier+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="https://placehold.co/320x420/EFEFEF/333?text=Foto+de+Javier" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>Javier, 35 años</h3>
+                        <p>"Establecer alianzas es clave para maximizar nuestro impacto. Juntos llegamos más lejos."</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>Javier Díaz</h2>
+                    <p>Relaciones Institucionales</p>
+                </div>
+            </div>
+
+            <!-- Miembro 7 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/FAD7A0/333?text=Laura+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="https://placehold.co/320x420/EFEFEF/333?text=Foto+de+Laura" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>Laura, 22 años</h3>
+                        <p>"Apoyar al equipo y a los nuevos voluntarios es mi prioridad. ¡La organización es fundamental!"</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>Laura Sánchez</h2>
+                    <p>Soporte y Operaciones</p>
+                </div>
+            </div>
+
+            <!-- Miembro 8 -->
+            <div class="team-member">
+                <div class="interactive-card">
+                    <img src="https://placehold.co/320x420/FAD7A0/333?text=Laura+(Caricatura)" alt="Caricatura" class="image cartoon-image">
+                    <img src="https://placehold.co/320x420/EFEFEF/333?text=Foto+de+Laura" alt="Foto real" class="image real-image">
+                    <div class="text-overlay">
+                        <h3>Laura, 22 años</h3>
+                        <p>"Apoyar al equipo y a los nuevos voluntarios es mi prioridad. ¡La organización es fundamental!"</p>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <h2>Laura Sánchez</h2>
+                    <p>Soporte y Operaciones</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // --- SCRIPT PARA CARGAR EL MENÚ ---
+        fetch('menu.html')
+            .then(response => response.ok ? response.text() : Promise.reject('menu.html no encontrado'))
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el menú:', error));
+
+        // --- SCRIPT PARA LAS TARJETAS INTERACTIVAS ---
+        // Se aplica a todas las tarjetas con la clase 'interactive-card'
+        document.querySelectorAll('.interactive-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // La función 'toggle' añade la clase si no está, y la quita si ya está.
+                this.classList.toggle('show-text');
+            });
+        });
+    </script>
+</body>
+</html>
