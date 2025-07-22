@@ -1,0 +1,452 @@
+[
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Qué es el sufragio pasivo?",
+    "opciones": [
+      "Derecho a votar",
+      "Derecho a postularse a un cargo público",
+      "Derecho a la protesta"
+    ],
+    "respuesta": "Derecho a postularse a un cargo público"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Cuántos diputados se eligen en Panamá?",
+    "opciones": [
+      "81",
+      "71",
+      "101"
+    ],
+    "respuesta": "71"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Cuál de estos NO es un tipo de transparencia?",
+    "opciones": [
+      "Activa",
+      "Focalizada",
+      "Universal"
+    ],
+    "respuesta": "Universal"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Qué pilar NO pertenece al Gobierno Abierto?",
+    "opciones": [
+      "Transparencia",
+      "Colaboración",
+      "Privatización"
+    ],
+    "respuesta": "Privatización"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Cada cuántos años se celebran las elecciones generales en Panamá?",
+    "opciones": [
+      "4 años",
+      "5 años",
+      "6 años"
+    ],
+    "respuesta": "5 años"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Cuál es la ley fundamental de la República de Panamá?",
+    "opciones": [
+      "El Código Penal",
+      "La Constitución Política",
+      "El Código Civil"
+    ],
+    "respuesta": "La Constitución Política"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Cuáles son los tres Órganos del Estado panameño?",
+    "opciones": [
+      "Ejecutivo, Legislativo y Judicial",
+      "Presidencial, Municipal y Comarcal",
+      "Central, Provincial y Distrital"
+    ],
+    "respuesta": "Ejecutivo, Legislativo y Judicial"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Qué representa el color azul en la bandera de Panamá?",
+    "opciones": [
+      "La pureza y la paz",
+      "El Partido Conservador",
+      "Los mares que rodean al país"
+    ],
+    "respuesta": "El Partido Conservador"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Qué es el Habeas Corpus?",
+    "opciones": [
+      "Un impuesto sobre la propiedad",
+      "Un derecho que protege contra la detención ilegal o arbitraria",
+      "El nombre del himno nacional"
+    ],
+    "respuesta": "Un derecho que protege contra la detención ilegal o arbitraria"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Cuál es la flor nacional de Panamá?",
+    "opciones": [
+      "La orquídea",
+      "La flor del Espíritu Santo",
+      "El papo"
+    ],
+    "respuesta": "La flor del Espíritu Santo"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "El principal deber de un ciudadano es:",
+    "opciones": [
+      "Viajar por el mundo",
+      "Acatar la Constitución y la ley",
+      "Tener una cuenta bancaria"
+    ],
+    "respuesta": "Acatar la Constitución y la ley"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Quién es el jefe del Órgano Ejecutivo en Panamá?",
+    "opciones": [
+      "El Presidente de la Asamblea",
+      "El Presidente de la Corte Suprema",
+      "El Presidente de la República"
+    ],
+    "respuesta": "El Presidente de la República"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "La Contraloría General de la República se encarga de:",
+    "opciones": [
+      "Organizar las elecciones",
+      "Fiscalizar los fondos y bienes públicos",
+      "Defender a los ciudadanos en juicios"
+    ],
+    "respuesta": "Fiscalizar los fondos y bienes públicos"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "¿Qué significa que Panamá es un Estado soberano e independiente?",
+    "opciones": [
+      "Que no necesita comerciar con otros países",
+      "Que no admite la intervención de otros Estados en sus asuntos internos",
+      "Que todos sus ciudadanos son millonarios"
+    ],
+    "respuesta": "Que no admite la intervención de otros Estados en sus asuntos internos"
+  },
+  {
+    "categoria": "Formación Cívica",
+    "pregunta": "El Tribunal Electoral es la entidad encargada de:",
+    "opciones": [
+      "Garantizar la libertad y honradez del sufragio popular",
+      "Cobrar los impuestos electorales",
+      "Construir los centros de votación"
+    ],
+    "respuesta": "Garantizar la libertad y honradez del sufragio popular"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "¿Qué representa la incidencia ciudadana?",
+    "opciones": [
+      "Hacer denuncias en redes sociales",
+      "Ejercer presión informada para generar cambios",
+      "Organizar protestas sin propuestas"
+    ],
+    "respuesta": "Ejercer presión informada para generar cambios"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "¿Cuántos pasos fundamentales tiene la incidencia ciudadana?",
+    "opciones": [
+      "4",
+      "8",
+      "10"
+    ],
+    "respuesta": "8"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "La incidencia política busca influir en:",
+    "opciones": [
+      "Políticas públicas",
+      "Redes sociales",
+      "Deportes"
+    ],
+    "respuesta": "Políticas públicas"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "¿Qué tipo de educación se resaltó en el taller de Acción Ciudadana?",
+    "opciones": [
+      "Educación militar",
+      "Educación emocional",
+      "Educación en contextos adversos"
+    ],
+    "respuesta": "Educación en contextos adversos"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "Una junta de desarrollo local es un ejemplo de:",
+    "opciones": [
+      "Un partido político",
+      "Una empresa privada",
+      "Organización comunitaria de base"
+    ],
+    "respuesta": "Organización comunitaria de base"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "¿Qué es un presupuesto participativo?",
+    "opciones": [
+      "Un presupuesto secreto del gobierno.",
+      "Un proceso donde los ciudadanos deciden sobre una parte del presupuesto público.",
+      "Un tipo de impuesto."
+    ],
+    "respuesta": "Un proceso donde los ciudadanos deciden sobre una parte del presupuesto público."
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "Firmar una petición en línea para salvar un parque es un acto de:",
+    "opciones": [
+      "Vandalismo digital",
+      "Participación ciudadana",
+      "Una tarea escolar"
+    ],
+    "respuesta": "Participación ciudadana"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "¿Qué es una auditoría social?",
+    "opciones": [
+      "Una revisión de las redes sociales de los políticos.",
+      "Un mecanismo de vigilancia ciudadana sobre proyectos y gastos públicos.",
+      "Una encuesta de popularidad."
+    ],
+    "respuesta": "Un mecanismo de vigilancia ciudadana sobre proyectos y gastos públicos."
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "El voluntariado es una expresión de:",
+    "opciones": [
+      "Trabajo forzado",
+      "Solidaridad y compromiso social",
+      "Una forma de evitar impuestos"
+    ],
+    "respuesta": "Solidaridad y compromiso social"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "¿Por qué es importante que los ciudadanos se organicen?",
+    "opciones": [
+      "Para tener más poder de negociación y ser escuchados por las autoridades.",
+      "Para crear clubes sociales exclusivos.",
+      "Para competir contra otros barrios."
+    ],
+    "respuesta": "Para tener más poder de negociación y ser escuchados por las autoridades."
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "Un referéndum es una consulta popular para:",
+    "opciones": [
+      "Elegir al artista del año.",
+      "Aprobar o rechazar una ley o un acto de gobierno.",
+      "Decidir el nombre de una calle."
+    ],
+    "respuesta": "Aprobar o rechazar una ley o un acto de gobierno."
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "La rendición de cuentas es una obligación de:",
+    "opciones": [
+      "Solo los ciudadanos",
+      "Los funcionarios públicos hacia la ciudadanía",
+      "Las empresas extranjeras"
+    ],
+    "respuesta": "Los funcionarios públicos hacia la ciudadanía"
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "¿Qué significa 'empoderamiento ciudadano'?",
+    "opciones": [
+      "Que los ciudadanos tengan más dinero.",
+      "Que los ciudadanos adquieran capacidades y confianza para participar en decisiones que les afectan.",
+      "Que los ciudadanos puedan ignorar las leyes."
+    ],
+    "respuesta": "Que los ciudadanos adquieran capacidades y confianza para participar en decisiones que les afectan."
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "Asistir a una reunión del consejo municipal es una forma de:",
+    "opciones": [
+      "Perder el tiempo.",
+      "Turismo político.",
+      "Participación a nivel local."
+    ],
+    "respuesta": "Participación a nivel local."
+  },
+  {
+    "categoria": "Participación Ciudadana",
+    "pregunta": "El acceso a la información pública es fundamental para:",
+    "opciones": [
+      "El chisme y la farándula.",
+      "Una participación ciudadana informada y efectiva.",
+      "Saber los salarios de nuestros vecinos."
+    ],
+    "respuesta": "Una participación ciudadana informada y efectiva."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Cuál de estas es una barrera psicológica en la comunicación?",
+    "opciones": [
+      "Ruido",
+      "Ansiedad",
+      "Enfermedad"
+    ],
+    "respuesta": "Ansiedad"
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Qué técnica asertiva consiste en repetir un mensaje con firmeza?",
+    "opciones": [
+      "Banco de niebla",
+      "Aplazamiento asertivo",
+      "Disco rayado"
+    ],
+    "respuesta": "Disco rayado"
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Qué estilo de pensamiento corresponde a la lógica y estructuras?",
+    "opciones": [
+      "Intuitivo",
+      "Analítico",
+      "Normativo"
+    ],
+    "respuesta": "Analítico"
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Qué significa SMART en la formulación de metas?",
+    "opciones": [
+      "Sistema Moderno de Aprendizaje Rápido y Técnico",
+      "Específico, Medible, Alcanzable, Relevante, Temporal",
+      "Simple, Mejorado, Ágil, Realista, Técnico"
+    ],
+    "respuesta": "Específico, Medible, Alcanzable, Relevante, Temporal"
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Qué es una alucinación en inteligencia artificial?",
+    "opciones": [
+      "Cuando inventa información errónea",
+      "Cuando predice correctamente",
+      "Cuando repite la pregunta"
+    ],
+    "respuesta": "Cuando inventa información errónea"
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "La escucha activa implica:",
+    "opciones": [
+      "Oír lo que dice la otra persona mientras piensas en tu respuesta.",
+      "Prestar total atención, entender, responder y recordar lo que se dijo.",
+      "Interrumpir para dar tu opinión."
+    ],
+    "respuesta": "Prestar total atención, entender, responder y recordar lo que se dijo."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Qué es la inteligencia emocional?",
+    "opciones": [
+      "Ser muy bueno en matemáticas.",
+      "La capacidad de reconocer, entender y gestionar tus propias emociones y las de los demás.",
+      "No mostrar nunca tus emociones."
+    ],
+    "respuesta": "La capacidad de reconocer, entender y gestionar tus propias emociones y las de los demás."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "En un equipo de trabajo, ¿qué es la sinergia?",
+    "opciones": [
+      "Cuando todos piensan exactamente igual.",
+      "Cuando el resultado del equipo es mayor que la suma de los esfuerzos individuales.",
+      "Cuando hay conflictos constantes."
+    ],
+    "respuesta": "Cuando el resultado del equipo es mayor que la suma de los esfuerzos individuales."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "La resiliencia es la capacidad de:",
+    "opciones": [
+      "Evitar todos los problemas.",
+      "Adaptarse y recuperarse frente a la adversidad.",
+      "Resistirse a cualquier tipo de cambio."
+    ],
+    "respuesta": "Adaptarse y recuperarse frente a la adversidad."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Qué es el pensamiento crítico?",
+    "opciones": [
+      "Criticar todo de forma negativa.",
+      "Aceptar la información sin cuestionarla.",
+      "Analizar la información de manera objetiva para formar un juicio."
+    ],
+    "respuesta": "Analizar la información de manera objetiva para formar un juicio."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "Dar feedback constructivo significa:",
+    "opciones": [
+      "Señalar únicamente los errores de una persona.",
+      "Ofrecer sugerencias específicas para mejorar, de manera respetuosa.",
+      "Decirle a alguien que todo lo que hizo está perfecto."
+    ],
+    "respuesta": "Ofrecer sugerencias específicas para mejorar, de manera respetuosa."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "Una persona proactiva se caracteriza por:",
+    "opciones": [
+      "Esperar a que le den órdenes para actuar.",
+      "Tomar la iniciativa y anticiparse a los problemas.",
+      "Reaccionar de forma impulsiva."
+    ],
+    "respuesta": "Tomar la iniciativa y anticiparse a los problemas."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "La empatía es fundamentalmente:",
+    "opciones": [
+      "Sentir lástima por los demás.",
+      "La capacidad de ponerse en el lugar del otro para entender sus sentimientos.",
+      "Estar siempre de acuerdo con los demás."
+    ],
+    "respuesta": "La capacidad de ponerse en el lugar del otro para entender sus sentimientos."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "¿Qué es la negociación 'ganar-ganar'?",
+    "opciones": [
+      "Una en la que una parte gana todo y la otra pierde.",
+      "Una en la que ambas partes ceden hasta quedar insatisfechas.",
+      "Una búsqueda de soluciones que beneficien a todas las partes involucradas."
+    ],
+    "respuesta": "Una búsqueda de soluciones que beneficien a todas las partes involucradas."
+  },
+  {
+    "categoria": "Habilidades Blandas",
+    "pregunta": "La gestión del tiempo es importante para:",
+    "opciones": [
+      "Trabajar más horas.",
+      "Aumentar la productividad y reducir el estrés.",
+      "Evitar tener tiempo libre."
+    ],
+    "respuesta": "Aumentar la productividad y reducir el estrés."
+  }
+]
