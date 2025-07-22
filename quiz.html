@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Interactivo</title>
+    <title>Quiz Interactivo de Acción Ciudadana</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
@@ -137,6 +137,12 @@
             text-align: center;
         }
         #results-container h2 { font-size: 2.5em; color: var(--primary-color); }
+        #result-image {
+            max-width: 200px;
+            margin: 15px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
         #score-text { font-size: 1.5em; margin: 10px 0; }
         #highscore-text { font-size: 1em; color: #6c757d; }
         #result-message { font-size: 1.2em; font-weight: 600; margin: 20px 0; }
@@ -197,6 +203,7 @@
 
             <div id="results-container" style="display: none;">
                 <h2>¡Quiz Completado!</h2>
+                <img id="result-image" src="" alt="Resultado del Quiz">
                 <p id="result-message"></p>
                 <p id="score-text"></p>
                 <p id="highscore-text"></p>
@@ -220,6 +227,7 @@
                 feedbackText: document.getElementById('feedback-text'),
                 quizView: document.getElementById('quiz-view'),
                 resultsContainer: document.getElementById('results-container'),
+                resultImage: document.getElementById('result-image'),
                 scoreText: document.getElementById('score-text'),
                 restartBtn: document.getElementById('restart-btn'),
                 progressBar: document.getElementById('progress-bar'),
@@ -256,12 +264,9 @@
                 elements.scoreDisplay.textContent = `Puntaje: 0`;
                 elements.resultsContainer.style.display = 'none';
                 elements.quizView.style.display = 'block';
-
                 let preguntasFiltradas = allQuestions.filter(q => q.categoria === categoriaSeleccionada);
-                
                 shuffleArray(preguntasFiltradas);
                 quizQuestions = preguntasFiltradas.slice(0, totalQuizQuestions);
-                
                 showNextQuestion();
             }
 
@@ -377,13 +382,24 @@
                 } else {
                     elements.highscoreText.textContent = `Mejor puntuación: ${highscore}`;
                 }
-                if(score > (totalQuizQuestions * 15) * 0.8) {
-                    elements.resultMessage.textContent = "¡Felicidades, eres un experto!";
-                } else if (score > (totalQuizQuestions * 15) * 0.5) {
-                    elements.resultMessage.textContent = "¡Muy bien! Sigue aprendiendo.";
-                } else {
-                    elements.resultMessage.textContent = "¡Buen intento! Sigue practicando.";
+                
+                let message = '';
+                let imageSrc = '';
+
+                // Lógica para determinar el mensaje y la imagen según el puntaje
+                if (score > 90) { // Alto
+                    message = "¡Felicidades, eres un experto!";
+                    imageSrc = 'conocenos/alto.jpg'; // Reemplaza con la ruta a tu imagen de puntaje alto
+                } else if (score > 40) { // Medio
+                    message = "¡Muy bien! Sigue aprendiendo y participando.";
+                    imageSrc = 'conocenos/medio.jpg'; // Reemplaza con la ruta a tu imagen de puntaje medio
+                } else { // Bajo
+                    message = "¡Buen intento! Cada pregunta es una oportunidad para aprender.";
+                    imageSrc = 'conocenos/bajo.jpg'; // Reemplaza con la ruta a tu imagen de puntaje bajo
                 }
+
+                elements.resultMessage.textContent = message;
+                elements.resultImage.src = imageSrc;
             }
             
             function showConfetti() {
@@ -399,7 +415,6 @@
                 }
             }
 
-            // --- LÓGICA PRINCIPAL ---
             const urlParams = new URLSearchParams(window.location.search);
             categoriaSeleccionada = urlParams.get('categoria');
 
@@ -424,7 +439,9 @@
                     elements.questionText.textContent = 'No se pudieron cargar las preguntas.';
                 });
             
-            elements.restartBtn.addEventListener('click', startQuiz);
+            elements.restartBtn.addEventListener('click', () => {
+                location.reload();
+            });
         });
     </script>
 </body>
