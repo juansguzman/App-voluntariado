@@ -14,7 +14,7 @@
     {
       "id": 2,
       "nombre_evento": "Reforestación en el Parque Metropolitano",
-      "empresa": "ANCON",
+      "empresa": "ANCÓN",
       "cantidad_requerida": 30,
       "lugar": "Centro de Visitantes del Parque Natural Metropolitano",
       "descripcion": "Ayúdanos a sembrar 100 árboles de especies nativas para contribuir a la reforestación del pulmón de la ciudad. Una actividad ideal para toda la familia.",
