@@ -50,7 +50,6 @@
         }
         /* --- Fin de Estilos del Menú --- */
 
-
         /* Estilos para el contenido principal */
         .container {
             max-width: 800px;
@@ -84,14 +83,23 @@
             height: 100%;
         }
 
+        /* --- Estilos para centrar el logo --- */
+        .logo-reimpact {
+            height: 200px;
+            width: 200px;
+            display: block; /* Necesario para que el margen automático funcione */
+            margin: 0 auto 20px auto; /* Centra la imagen horizontalmente y añade espacio debajo */
+        }
     </style>
 </head>
 <body>
 
     <div id="menu-placeholder"></div> 
-    <div class="container">
-        <h1>ReimpactsGO</h1>
 
+    <div class="container">
+        <img src="conocenos/Logo.jpg" alt="Logo de ReimpactsGO" class="logo-reimpact" onerror="this.onerror=null;this.src='https://placehold.co/100x100/transparent/1D1D1B?text=Logo';">
+        <h1>ReimpactsGO</h1>
+        
         <!-- Video de YouTube Incrustado -->
         <div class="video-container">
             <iframe 
