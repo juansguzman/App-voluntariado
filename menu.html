@@ -3,7 +3,8 @@
     nav {
         /* Color de fondo principal (Azul Claro) */
         background-color: #ACC9FC;
-        padding: 10px 20px;
+        /* Aumentado el padding horizontal para más espacio en los lados */
+        padding: 10px 40px;
         display: flex;
         align-items: center;
         font-family: sans-serif; /* Se recomienda añadir una fuente base */
@@ -37,10 +38,16 @@
         /* Color del texto al pasar el cursor (Blanco Hueso) */
         color: #F7F7F7;
     }
+
+    /* --- NUEVO: Espaciador para centrar los enlaces --- */
+    .nav-spacer {
+        flex-grow: 1; /* Este elemento crecerá para ocupar el espacio disponible */
+    }
+
     .profile-link-container {
         margin-left: auto; 
         position: relative;
-        padding-right: 3cap; 
+        /* Eliminado el padding-right para que el ajuste sea simétrico */
     }
     .profile-icon {
         display: block;
@@ -49,7 +56,6 @@
         border-radius: 50%;
         overflow: hidden;
         transition: transform 0.2s ease;
-        /* Color de fondo del ícono de perfil (Dorado/Amarillo) */
         background-color: transparent;
     }
     .profile-icon:hover {
@@ -65,7 +71,6 @@
         bottom: -45px;
         left: 50%;
         transform: translateX(-50%);
-        /* Estilo del tooltip consistente con la marca */
         background-color: #1D1D1B;
         color: #F7F7F7;
         padding: 5px 10px;
@@ -81,34 +86,35 @@
         visibility: visible;
         opacity: 1;
     }
-    .imagen-circular {
-    width: 50px; /* Ancho y alto deben ser iguales */
-    height: 50px;
-    border-radius: 50%; /* ¡Esta es la propiedad clave que crea el círculo! */
-    object-fit: cover;  /* Esto asegura que la imagen llene el círculo sin deformarse. */
-}
 </style>
 
 <!-- Contenido del menú -->
 <nav>
     <ul>
-        <!-- Logo añadido aquí -->
+        <!-- Logo -->
         <li>
             <a href="index.html">
-                <!-- Se ha cambiado el color de fondo a 'transparent' en la URL -->
-                <img src="conocenos/Logo.jpg" alt="Logo de Reimpacts" class="logo imagen-circular">
+                <img src="Recursos/logo_app.png" alt="Logo de Reimpacts" class="logo" onerror="this.onerror=null;this.src='https://placehold.co/120x40/transparent/1D1D1B?text=REIMPACTS';">
             </a>
         </li>
 
+        <!-- Espaciador para empujar los enlaces al centro -->
+        <li class="nav-spacer"></li>
+
+        <!-- Enlaces de Navegación -->
         <li><a href="index.html">Inicio</a></li>
         <li><a href="crear_vol.html">Crear voluntariados</a></li>
-        <li><a href="Inscrip.html">Inscribirse en voluntariados</a></li>
-        <li><a href="Blogs.html">Comunidades que aprenden</a></li>
+        <li><a href="Inscrip.html">Inscribirse</a></li>
+        <li><a href="Blogs.html">Comunidades</a></li>
         <li><a href="menu_act.html">Actividades</a></li>
         <li><a href="conocenos.html">Nuestro equipo</a></li>
+
+        <!-- Espaciador para empujar los enlaces al centro -->
+        <li class="nav-spacer"></li>
         
+        <!-- Ícono de Perfil -->
         <li class="profile-link-container">
-            <a href="perfil.html" class="profile-icon imagen-circular" title="Perfil de usuario">
+            <a href="perfil.html" class="profile-icon" title="Perfil de usuario">
                 <img src="chica.jpeg" alt="Perfil de usuario" onerror="this.onerror=null;this.src='https://placehold.co/40x40/EFEFEF/333?text=P';">
                 <span class="tooltip">Perfil de usuario</span>
             </a>

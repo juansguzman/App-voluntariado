@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de Voluntariado</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f6; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f7f6; 
+        }
+        .container { 
+            max-width: 1100px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+        }
         
         .blog-header {
             text-align: center;
@@ -61,11 +73,15 @@
         .featured-post-content .read-more-btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            background-color: #1D1D1B; /* Azul oscuro de tu paleta */
+            color: #F7F7F7; /* Blanco hueso */
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .featured-post-content .read-more-btn:hover {
+            background-color: #333;
         }
 
         /* Cuadrícula de Posts */
@@ -129,43 +145,43 @@
 
     <div class="container">
         <header class="blog-header">
-            <h1>Nuestro Blog</h1>
+            <h1>Comunidades que Aprenden</h1>
             <p>Historias de impacto, reflexiones sobre el voluntariado y crónicas de los eventos que están transformando nuestra comunidad.</p>
         </header>
 
-        <!-- Artículo Destacado -->
+        <!-- Artículo Destacado (Actualizado) -->
         <article class="featured-post">
             <div class="featured-post-image">
-                <img src="https://placehold.co/600x400/28a745/ffffff?text=Reforestación+Exitosa" alt="Voluntarios plantando árboles">
+                <img src="https://placehold.co/600x400/1D1D1B/F7F7F7?text=Jóvenes+Liderando+el+Cambio" alt="Jóvenes protestando pacíficamente">
             </div>
             <div class="featured-post-content">
-                <p class="category">Eventos Pasados</p>
-                <h2>Crónica de una Mañana Verde: La Reforestación en el Parque Metropolitano</h2>
-                <p class="excerpt">Más de 30 voluntarios se unieron el pasado sábado para sembrar 100 árboles nativos. Revive con nosotros los momentos más especiales de una jornada llena de esfuerzo, sonrisas y un profundo amor por nuestro planeta.</p>
-                <a href="#" class="read-more-btn">Leer más</a>
+                <p class="category">Reflexión</p>
+                <h2>Jóvenes, motores del cambio y la esperanza en Latinoamérica</h2>
+                <p class="excerpt">Hay una energía inagotable que se enciende en cada nueva generación: transformar es su esencia, el anhelo de justicia y la valentía para alzar la voz cuando el futuro no está claro...</p>
+                <a href="articulo-jovenes.html" class="read-more-btn">Leer más</a>
             </div>
         </article>
 
         <!-- Cuadrícula de otros posts -->
         <section class="post-grid">
             <article class="post-card">
-                <img src="https://placehold.co/400x250/007bff/ffffff?text=Impacto+Social" alt="Manos ayudando">
+                <img src="https://placehold.co/400x250/ACC9FC/1D1D1B?text=Impacto+Social" alt="Manos ayudando">
                 <div class="post-card-content">
                     <h3>5 Razones por las que el Voluntariado Mejora tu Bienestar</h3>
                     <p class="author-date">Por Equipo Editorial | 05 de Julio, 2025</p>
                 </div>
             </article>
             <article class="post-card">
-                <img src="https://placehold.co/400x250/ffc107/ffffff?text=Limpieza+de+Playa" alt="Playa limpia">
+                <img src="https://placehold.co/400x250/EAB32A/1D1D1B?text=Limpieza+de+Playa" alt="Playa limpia">
                 <div class="post-card-content">
                     <h3>Galería: Así se vivió la Limpieza de Playa en Costa del Este</h3>
                     <p class="author-date">Por Ana Rodríguez | 18 de Junio, 2025</p>
                 </div>
             </article>
             <article class="post-card">
-                <img src="https://placehold.co/400x250/dc3545/ffffff?text=Primer+Paso" alt="Persona con dudas">
+                <img src="https://placehold.co/400x250/F7F7F7/1D1D1B?text=Primer+Paso" alt="Persona con dudas">
                 <div class="post-card-content">
-                    <h3>¿Nervioso por tu primer voluntariado? Consejos para empezar con el pie derecho</h3>
+                    <h3>¿Nervioso por tu primer voluntariado? Consejos para empezar</h3>
                     <p class="author-date">Por Carlos Pérez | 10 de Junio, 2025</p>
                 </div>
             </article>
